@@ -22,4 +22,8 @@ export class AppComponent {
     login(){
         this.router.navigate(['/login']);
     }
+
+    bookList(){
+        this.router.navigate(['/book-list']);
+    }
 }
