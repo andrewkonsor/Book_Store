@@ -1,0 +1,46 @@
+<div class="container">
+  <div class="card">
+    <div class="card-body">
+      <div class="form-row">
+        <div class="group-control col-md-4"></div>
+        <div class="group-control col-md-4">
+          <label>Your Name</label>
+          <input type="text" class="form-control" placeholder="Your Name" id="usersName">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="group-control col-md-4"></div>
+        <div class="group-control col-md-4">
+          <label>Review Title</label>
+          <input type="text" class="form-control" placeholder="Review Title" id="reviewTitle"> <!-- Title of Review -->
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="group-control col-md-4"></div>
+        <div class="group-control col-md-4">
+          <label>Rating</label>
+          <input type="text" class="form-control" oninput="this.value=this.value.replace(/[^0-9]/g,'');" id="bookRating"
+            maxlength="1" placeholder="Rating"> <!-- Review Rating out of 5 -->
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="group-control col-md-4"></div>
+        <!-- Empty -->
+        <div class="group-control col-md-4">
+          <label>Your Review</label>
+          <textarea class="form-control" id="reviewText" rows="4" placeholder="Review"></textarea>
+        </div>
+      </div>
+      <div class="form-row">&nbsp;</div>
+      <div class="form-row">
+        
+        <div class="group-control col-md-4">
+          <!-- Empty -->
+        </div>
+        <div class="group-control col-md-4 text-center">
+          <button type="submit" class="btn btn-dark mb-2">Submit Review</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -21,6 +21,13 @@ import { LoginComponent } from './login';
 import { RegisterComponent } from './register';
 import { BooksComponent } from './books/books.component';
 import { BookListComponent } from './book-list/book-list.component';
+import { BookCardComponent } from './book-card/book-card.component';
+import { BookCreateComponent } from './book-create/book-create.component';
+import { BookGenereCardComponent } from './book-genere-card/book-genere-card.component';
+import { BookReviewComponent } from './book-review/book-review.component';
+import { BookReviewCreateComponent } from './book-review-create/book-review-create.component';
+import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
+import { ShoppingCartBookCardComponent } from './shopping-cart-book-card/shopping-cart-book-card.component';
 
 
 @NgModule({
@@ -40,7 +47,14 @@ import { BookListComponent } from './book-list/book-list.component';
         LoginComponent,
         RegisterComponent,
         BooksComponent,
-        BookListComponent
+        BookListComponent,
+        BookCardComponent,
+        BookCreateComponent,
+        BookGenereCardComponent,
+        BookReviewComponent,
+        BookReviewCreateComponent,
+        ShoppingCartComponent,
+        ShoppingCartBookCardComponent
     ],
     providers: [
         { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },

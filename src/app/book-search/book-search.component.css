@@ -1,0 +1,10 @@
+.btn-search {
+    background-color: dodgerblue; 
+    border: none; 
+    color: white; 
+    font-size: 16px; 
+    cursor: pointer; 
+}
+.btn-search:hover {
+    background-color: royalblue; 
+}
