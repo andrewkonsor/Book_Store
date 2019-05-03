@@ -7,6 +7,7 @@ import {AngularFireModule} from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 import {environment} from './environments/environment';
+import { CookieService } from 'ngx-cookie-service';
 
 // used to create fake backend
 import { fakeBackendProvider } from './_helpers';
@@ -21,6 +22,7 @@ import { LoginComponent } from './login';
 import { RegisterComponent } from './register';
 import { BooksComponent } from './books/books.component';
 import { BookListComponent } from './book-list/book-list.component';
+import { BookSearchComponent } from './book-search/book-search.component';
 import { BookCardComponent } from './book-card/book-card.component';
 import { BookCreateComponent } from './book-create/book-create.component';
 import { BookGenereCardComponent } from './book-genere-card/book-genere-card.component';
@@ -36,6 +38,7 @@ import { ShoppingCartBookCardComponent } from './shopping-cart-book-card/shoppin
         ReactiveFormsModule,
         HttpClientModule,
         routing,
+        FormsModule,
         AngularFireModule.initializeApp(environment.firebase),
         AngularFirestoreModule, // imports firebase/firestore, only needed for database features
         AngularFireStorageModule // imports firebase/storage only needed for storage features
@@ -49,6 +52,7 @@ import { ShoppingCartBookCardComponent } from './shopping-cart-book-card/shoppin
         BooksComponent,
         BookListComponent,
         BookCardComponent,
+        BookSearchComponent,
         BookCreateComponent,
         BookGenereCardComponent,
         BookReviewComponent,
@@ -59,6 +63,7 @@ import { ShoppingCartBookCardComponent } from './shopping-cart-book-card/shoppin
     providers: [
         { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
         { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
+        CookieService,
 
         // provider used to create fake backend
         fakeBackendProvider
