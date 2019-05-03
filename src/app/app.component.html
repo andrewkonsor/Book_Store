@@ -1,0 +1,34 @@
+<!-- nav -->
+<nav class="navbar navbar-expand navbar-dark bg-dark">
+  <div class="navbar-nav">
+      <a class="nav-item nav-link" routerLink="/">Home</a>
+      <a class="nav-item nav-link" (click) = "bookList()">Books</a>
+      <a class="nav-item nav-link" *ngIf="currentUser" (click)="logout()">Logout</a>
+      <a class="nav-item nav-link" *ngIf="!currentUser" (click)="login()">Login</a>
+      <a class="nav-item nav-link" *ngIf="currentUser">{{currentUser.firstName}}</a>
+  </div>
+</nav>
+
+<!-- main app container -->
+<div class="jumbotron">
+  <div class="container">
+      <div class="row">
+          <div class="col-sm-6 offset-sm-3">
+              <alert></alert>
+              <router-outlet></router-outlet>
+              <app-shopping-cart></app-shopping-cart>
+              <!-- <button (click) = "addSample()">Add</button> -->
+          </div>
+      </div>
+  </div>
+</div>
+
+<!-- credits -->
+<div class="text-center">
+  <p>
+      <a href="" target="_top">Book Store Example</a>
+  </p>
+  <p>
+      <a href="" target="_top">Bookstore.com</a>
+  </p>
+</div>
