@@ -3,6 +3,8 @@
   <div class="navbar-nav">
       <a class="nav-item nav-link" routerLink="/">Home</a>
       <a class="nav-item nav-link" (click) = "bookList()">Books</a>
+      <!-- <a class="nav-item nav-link" (click) = "bookList()">Books</a> -->
+      <a class="nav-item nav-link" (click) = "bookList()">Books</a>
       <a class="nav-item nav-link" *ngIf="currentUser" (click)="logout()">Logout</a>
       <a class="nav-item nav-link" *ngIf="!currentUser" (click)="login()">Login</a>
       <a class="nav-item nav-link" *ngIf="currentUser">{{currentUser.firstName}}</a>
@@ -16,7 +18,12 @@
           <div class="col-sm-6 offset-sm-3">
               <alert></alert>
               <router-outlet></router-outlet>
-              <app-shopping-cart></app-shopping-cart>
+              <app-book-card></app-book-card>
+              <app-book-create></app-book-create>
+              <app-book-genere-card></app-book-genere-card>
+              <app-book-review></app-book-review>
+              <app-book-review-create></app-book-review-create>
+              <app-book-search></app-book-search>
               <!-- <button (click) = "addSample()">Add</button> -->
           </div>
       </div>
