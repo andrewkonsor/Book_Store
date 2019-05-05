@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Book } from '../book';
+import { BookService } from '../book.service';
 
 @Component({
   selector: 'app-shopping-cart-book-card',
@@ -6,8 +8,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./shopping-cart-book-card.component.css']
 })
 export class ShoppingCartBookCardComponent implements OnInit {
+  books: Book[];
 
-  constructor() { }
+  constructor(private bookService: BookService) { }
 
   ngOnInit() {
   }

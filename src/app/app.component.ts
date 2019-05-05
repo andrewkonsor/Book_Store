@@ -28,6 +28,7 @@ export class AppComponent {
 
     logout() {
         this.authenticationService.logout();
+        this.router.navigate(['/']);
         // this.router.navigate(['/login']);
     }
     login(){
@@ -37,8 +38,4 @@ export class AppComponent {
     bookList(){
         this.router.navigate(['/book-list']);
     }
-
-    // addSample(){
-    //     this.customerService.addCustomer(this.cust);
-    // }
 }
