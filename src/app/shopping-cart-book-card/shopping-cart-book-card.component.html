@@ -3,24 +3,22 @@
     <div class="card-body">
       <div class="row">
         <div class="col-lg-4 ">
-          <img src="../../assets/becoming.jpg" class="" alt="Book Image" height="250px" width="200px"> <!-- Book Image, replace to get from asserts based on book name-->
+          <img src="{{book.Image}}" class="" alt="Book Image" height="200px" width="150px"> <!-- Book Image, replace to get from asserts based on book name-->
         </div>
         <div class="col-8">
-          <h5 class="card-title">Becoming</h5> <!-- Book Title -->
-          <h5 class="card-title">Michelle Obama</h5> <!-- Book Author -->
-          <p class="card-text">Becoming is the memoir of former United States First Lady Michelle Obama published in 2018. Described by the author as a deeply personal experience, 
-            the book talks about her roots and how she found her voice, as well as her time in the White House, her 
-            public health campaign, and her role as a mother.</p> <!-- Book Description -->
+          <h5 class="card-title">{{book.Title}}</h5> <!-- Book Title -->
+          <h5 class="card-title">{{book.Author}}</h5> <!-- Book Author -->
+          <p class="card-text">{{book.Description}}</p> <!-- Book Description -->
         </div>
       </div>
         <div class="row">
           <div class="col-4">
             <br>
-            <h5 class="card-title" id="price">$9.99</h5> <!-- Book Price -->
+            <h5 class="card-title" id="price">${{book.Price}}</h5> <!-- Book Price -->
           </div>
           <div class="col-6">
             <label>&nbsp;</label>
-            <input type="button" class="btn btn-dark" value="Remove">
+            <input type="button" class="btn btn-dark" value="Remove" (click) = "removeBook(book)">
           </div>
           <div class="col-2"> <!-- Quanity amount -->
             <br>
