@@ -22,9 +22,9 @@ export class BookSearchResultComponent implements OnInit {
         console.log(x);
         if(x.Title.toLocaleLowerCase().includes(this.cookie.get("search").toLocaleLowerCase()))
           this.searchBooks.push(x);
-        if(x.Author.toLocaleLowerCase().includes(this.cookie.get("search").toLocaleLowerCase()))
+        else if(x.Author.toLocaleLowerCase().includes(this.cookie.get("search").toLocaleLowerCase()))
           this.searchBooks.push(x);
-        if(x.ISBN == parseInt(this.cookie.get("search")))
+        else if(x.ISBN == parseInt(this.cookie.get("search")))
           this.searchBooks.push(x);
       }
       console.log(data);
