@@ -8,6 +8,7 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 import {environment} from './environments/environment';
 import { CookieService } from 'ngx-cookie-service';
+import { RouterModule, Routes} from '@angular/router';
 
 // used to create fake backend
 import { fakeBackendProvider } from './_helpers';
@@ -30,6 +31,7 @@ import { BookReviewComponent } from './book-review/book-review.component';
 import { BookReviewCreateComponent } from './book-review-create/book-review-create.component';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import { ShoppingCartBookCardComponent } from './shopping-cart-book-card/shopping-cart-book-card.component';
+import { BookSearchResultComponent } from './book-search-result/book-search-result.component';
 
 
 @NgModule({
@@ -58,7 +60,8 @@ import { ShoppingCartBookCardComponent } from './shopping-cart-book-card/shoppin
         BookReviewComponent,
         BookReviewCreateComponent,
         ShoppingCartComponent,
-        ShoppingCartBookCardComponent
+        ShoppingCartBookCardComponent,
+        BookSearchResultComponent
     ],
     providers: [
         { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },

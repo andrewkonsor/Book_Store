@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Book } from '../book';
 import { BookService } from '../book.service';
 
@@ -8,11 +8,16 @@ import { BookService } from '../book.service';
   styleUrls: ['./shopping-cart-book-card.component.css']
 })
 export class ShoppingCartBookCardComponent implements OnInit {
-  books: Book[];
+  @Input() book: Book;
 
   constructor(private bookService: BookService) { }
 
   ngOnInit() {
+  }
+
+  removeBook(book){
+    console.log(book);
+    this.bookService.removeBookCart(book);
   }
 
 }

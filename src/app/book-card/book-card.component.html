@@ -1,5 +1,5 @@
 
-<div class="card" *ngFor="let book of books"> 
+<div class="card" *ngIf = "!book.disabled"> 
     <div class="card-body">
       <div class="row">
         <div class="col-lg-4 ">
@@ -21,7 +21,8 @@
           </div>
           <div class="col-4">
             <br>
-            <input type="button" class="btn btn-dark float-right" value="Add to Cart" (click) = "addToCart()"> <!-- Add to cart Button-->
+            <input type="button" class="btn btn-dark float-right" *ngIf = "!isUser()"value="Add to Cart" (click) = "addToCart(book)"> <!-- Add to cart Button-->
+            <input type="button" class="btn btn-dark float-right" *ngIf = "isUser()"value="Remove" (click) = "removeBook(book)"> <!--remove button-->
           </div>
 
         </div>

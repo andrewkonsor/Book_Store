@@ -1,7 +1,12 @@
 export interface Book {
-    isbn?: number;
-    price?: number;
-    title?: string;
-    author?: string;
-    genre?: string;
+    ID?: number;
+    ISBN?: number;
+    Price?: number;
+    Title?: string;
+    Description?: string;
+    Author?: string;
+    Genre?: string;
+    Image?: string;
+    disabled?: boolean;
+    id?: string;
 }

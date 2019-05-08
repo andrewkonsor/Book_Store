@@ -1,23 +1,20 @@
 <div class="card">
   <!-- Find a way for genre to show up here-->
+  {{genre}}
   <div class="row">&nbsp; </div>
   <div class="row">
-    
     <div class="col-md-1"></div>
     <div class="col-md-2">
-      <a href=""><img src="../../assets/becoming.jpg" width="200" height="250" class="rounded"></a>
+      <a (click) = "showCard(books[0])"><img src={{books[0].Image}} width="200" height="250" class="rounded"></a>
     </div>
     <div class="col-md-2">
-      <a href=""><img src="../../assets/becoming.jpg" width="200" height="250" class="rounded"></a>
+      <a href=""><img src="{{books[1].Image}}" width="200" height="250" class="rounded"></a>
     </div>
     <div class="col-md-2">
-      <a href=""><img src="../../assets/becoming.jpg" width="200" height="250" class="rounded"></a>
+      <a href=""><img src="{{books[2].Image}}" width="200" height="250" class="rounded"></a>
     </div>
     <div class="col-md-2">
-      <a href=""><img src="../../assets/becoming.jpg" width="200" height="250" class="rounded"></a>
-    </div>
-    <div class="col-md-2">
-      <a href=""><img src="../../assets/becoming.jpg" width="200" height="250" class="rounded"></a>
+      <a href=""><img src="{{books[3].Image}}" width="200" height="250" class="rounded"></a>
     </div>
     </div>
     <div class="row">&nbsp;</div>

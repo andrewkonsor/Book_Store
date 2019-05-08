@@ -2,37 +2,37 @@
   <div class="form-row">
     <div class="form-group col-md-6">
       <label>Book Title</label>
-      <input type="text" class="form-control" placeholder="Book Title">
+      <input type="text" class="form-control" placeholder="Book Title" [(ngModel)] = "book.Title">
       <div class="invalid-feedback">
         Please enter book title.
       </div>
     </div>
     <div class="form-group col-md-6">
       <label>Author</label>
-      <input required type="text" class="form-control" id="validationAuthor" placeholder="Author">
+      <input required type="text" class="form-control" id="validationAuthor" placeholder="Author" [(ngModel)] = "book.Author">
       <div class="invalid-feedback">
           Please enter a Author.
         </div>
     </div>
     <div class="form-group col-md-6">
       <label>Description</label>
-      <textarea row="3" class="form-control" placeholder="Description of book."></textarea>
+      <textarea row="3" class="form-control" placeholder="Description of book." [(ngModel)] = "book.Description"></textarea>
     </div>
     <div class="form-group col-md-6">
       <label>ISBN</label>
-      <input required type="text" class="form-control" placeholder="ISBN" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
+      <input required type="text" class="form-control" placeholder="ISBN" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" [(ngModel)] = "book.ISBN">
     </div>
     <div class="form-group col-md-6">
       <label>Price</label>
-      <input required type=text class="form-control" placeholder="Price" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
+      <input required type=text class="form-control" placeholder="Price" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" [(ngModel)] = "book.Price">
     </div> 
     <div class="form-group col-md-6">
       <label>Book Image:</label>
-      <input required type="text" class="form-control" placeholder="Image Link">
+      <input required type="text" class="form-control" placeholder="Image Link" [(ngModel)] = "book.Image">
     </div>
     <div class="form-group col-md-6">
       <label>Genre</label>
-      <select class="form-control">
+      <select class="form-control" [(ngModel)] = "book.Genre">
         <option value="Biography">Biography</option>
         <option value="Fantasy">Fantasy</option>
         <option value="Horror">Horror</option>
@@ -41,7 +41,7 @@
     </div>
     <div class="form-group col-md-6">
       <label>Send It</label><br>
-      <input type="button" class="btn btn-dark" value="Create Book">
+      <input type="button" class="btn btn-dark" value="Create Book" (click) = "onSubmit()">
     </div>
     
   </div>

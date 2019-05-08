@@ -1,1 +1,5 @@
-<app-book-card></app-book-card>
+<app-book-search></app-book-search>
+<div class = "books" *ngFor = "let book of books">
+    <app-book-card [book] = "book"></app-book-card>
+</div>
+
